@@ -15,6 +15,8 @@ For all samples to set up GitHub workflows, see [Create your first workflow](htt
 ## Pre-requisites
 * 1. Install VS Code
 * 2. Install Azure IoT Explorer
+* 3. Install Azure IoT Explorer
+
 
 
 # 1. [Optional] Flash your board with OpenSTLinux images
