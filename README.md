@@ -8,14 +8,17 @@ languages:
 - Shell and python
 ---
 
-# Sample ASP.NET Core application for GitHub Actions
+# Configure and deploy IoT Edge on STM32MP1 board
 
 For all samples to set up GitHub workflows, see [Create your first workflow](https://github.com/Azure/actions-workflow-samples
 
-# Steps to create an End-to-End CI/CD Workflow
-
 ## Pre-requisites
-* Create a new Web App in Azure Portal with runtime stack as .NETCore and OS as Linux/Windows
+* 1. Install VS Code
+* 2. Install Azure IoT Explorer
+
+
+# 1. [Optional] Flash your board with OpenSTLinux images
+
 
 ### Create an ASP.NET App Service in Azure
 
