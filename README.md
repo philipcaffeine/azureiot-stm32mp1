@@ -1,11 +1,11 @@
 ---
-page_type: dotnet core
-description: "Deploy Python application using GitHub Actions"
+page_type: python and linux script
+description: "Configure and deploy IoT Edge on STM32MP1 board"
 products:
-- GitHub Actions
-- Azure App service
+- Azure IoT Hub
+- Azure IoT Edge
 languages:
-- dotnet core
+- Shell and python
 ---
 
 # Sample ASP.NET Core application for GitHub Actions
@@ -16,15 +16,10 @@ For all samples to set up GitHub workflows, see [Create your first workflow](htt
 
 ## Pre-requisites
 * Create a new Web App in Azure Portal with runtime stack as .NETCore and OS as Linux/Windows
-* Copy Publish Profile Settings of the app
 
 ### Create an ASP.NET App Service in Azure
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-windows-ASPNET%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-windows-ASPNET%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
 </a>
 
 This template deploys a web app with ASP.NET support. The web app with ASP.NET is an app service that allows you to deploy your ASP.NET website. This will deploy a free tier Windows App Service Plan where you will host your App Service.
@@ -37,21 +32,9 @@ If you are new to Azure App Service, see:
 
 ## Configure secrets in the GH repo:
 * In the GH repo with Application code, [Define a new secret](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md) under repository by navigating to **settings** > **secrets** > **Add a new secret** 
-* Paste the contents for the downloaded publish profile file into the secret's value field
-* Now in the workflow file in your branch: `.github/workflows/workflow.yml` replace the secret for the input `publish-profile:` of the deploy Azure WebApp action
 
-## test your workflow
-* Commit a change in the app code. 
-* You should see a new GitHub Action initiated in **Actions** tab.
-* At the end of the execution, navigate to the App URL to visualise the change introduced.
 
-## Workflow YAML explained
 
-* [Checkout](https://github.com/actions/checkout) Checks out your Git repository content into Github Actions agent.
-* Environment setup using [Setup DotNet](https://github.com/actions/setup-dotnet) - Sets up a dotnet environment by optionally downloading and caching a version of dotnet by SDK version and adding to PATH .
-* DotNet Build & Publish
-* Deploy to App service using azure/webapps-deploy@v1 action which authenticates using [Azure Web App Publish Profile](https://github.com/projectkudu/kudu/wiki/Deployment-credentials#site-credentials-aka-publish-profile-credentials)
-which we configured using the secret set up at the repo level
 
 
 # Contributing
