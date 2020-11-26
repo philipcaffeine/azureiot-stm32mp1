@@ -15,7 +15,7 @@ languages:
 For all samples to set up GitHub workflows, see [Create your first workflow](https://github.com/Azure/actions-workflow-samples
 
 ## Pre-requisites
-* 1. Install VS Code
+* 1. Install VS Code https://code.visualstudio.com/download
 * 2. Install Azure IoT Explorer
 * 3. Install Azure IoT Explorer
 
