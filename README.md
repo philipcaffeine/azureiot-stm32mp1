@@ -121,11 +121,35 @@ iotedge logs -f edgeAgent
 
 ### Set your IoT Edge to install modules
 
-1. Open your VS code, git clone the 
+1. Open your VS code
 
-1. [Azure Portal] Go to IoT Hub, select your edge just created. Click "Set Modules". Click "Review + Create", copy the deployment.json [link] content into Deployment windows.  
+Git clone https://github.com/philipcaffeine/azureiot-stm32mp1
 
-![](2020-11-26-10-28-45.png)
+2. Connect your VS code to IoT Hub
+
+Copy IoT Hub string from Azure Portal. Open Azure Portal, click your Iot Hub, click "Shared access policies" in left hand side. 
+Select "iothubowner", copy the "connection string-primary key" to notepad.
+
+![](2020-11-26-10-39-15.png)
+
+Open your VS code, in command platte, select "Azure IOT Hub, set connection string" 
+
+![](2020-11-26-10-40-14.png)
+
+
+3. Deployment new edge modules via VS code
+
+First to replace the password get from your instructor. 
+
+![](2020-11-26-10-47-54.png)
+
+Right click to generate the deployment to your edge device.
+
+![](2020-11-26-10-41-36.png)
+
+
+![](2020-11-26-10-43-15.png)
+
 
 
 

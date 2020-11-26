@@ -27,7 +27,7 @@
             },
             "status": "running",
             "restartPolicy": "always"
-          },
+          }
         },
         "runtime": {
           "settings": {
@@ -35,7 +35,7 @@
             "registryCredentials": {
               "stmsworkshopreg01": {
                 "address": "stmsworkshopreg01.azurecr.io",
-                "password": "input the password",
+                "password": "replace the password from your instructer",
                 "username": "stmsworkshopreg01"
               }
             }
