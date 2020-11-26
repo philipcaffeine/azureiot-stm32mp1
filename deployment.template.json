@@ -4,14 +4,14 @@
       "properties.desired": {
         "modules": {
           "SensorReadModule": {
-            "settings": {
-              "image": "stmsworkshopreg01.azurecr.io/sensorreadmodule:0.0.16-arm32v7.debug",
-              "createOptions": "{\"ExposedPorts\":{\"5678/tcp\":{}},\"HostConfig\":{\"Mounts\":[{\"Source\":\"/home/root/sensor/output\",\"Target\":\"/sensor\",\"Type\":\"bind\"}],\"PortBindings\":{\"5678/tcp\":[{\"HostPort\":\"5678\"}]}}}"
-            },
-            "type": "docker",
             "version": "1.0",
+            "type": "docker",
             "status": "running",
-            "restartPolicy": "always"
+            "restartPolicy": "always",
+            "settings": {
+              "image": "stmsworkshopreg01.azurecr.io/sensorreadmodule:0.0.1-arm32v7.debug",
+              "createOptions": "{\"ExposedPorts\":{\"5678/tcp\":{}},\"HostConfig\":{\"Mounts\":[{\"Source\":\"/home/root/sensor/output\",\"Target\":\"/sensor\",\"Type\":\"bind\"}],\"PortBindings\":{\"5678/tcp\":[{\"HostPort\":\"5678\"}]}}}"
+            }
           },
           "SimulatedTemperatureSensor": {
             "settings": {
@@ -35,7 +35,7 @@
             "registryCredentials": {
               "stmsworkshopreg01": {
                 "address": "stmsworkshopreg01.azurecr.io",
-                "password": "replace the password from your instructer",
+                "password": "replace with your password",
                 "username": "stmsworkshopreg01"
               }
             }
