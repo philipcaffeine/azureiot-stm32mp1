@@ -135,6 +135,9 @@ Open your VS code, in command platte, select "Azure IOT Hub, set connection stri
 
 3. Deployment new edge modules via VS code
 
+    PC > mkdir $HOME/root/sensor
+    PC > mkdir $HOME/root/sensor/output
+
 First to replace the password get from your instructor. 
 
 ![](2020-11-26-10-47-54.png)
@@ -151,8 +154,19 @@ Right click to generate the deployment to your edge device.
 
     PC> iotedge logs -f edgeAgent
 
+5. Verify if your IoT Hub is getting telemetry from Edge module to Hub
 
 
+Open Azure IoT Explorer from your laptop. Add new connection from your previous "IOT Hub conenctrion string" 
+
+![](2020-11-26-11-18-33.png)
+
+Click the previous created Edge from list. Click "Telemetry" from left hand navigator. Click start to monitor the data.
+
+
+
+
+### Create Stream Analytics to stream your data to cloud PowerBI
 
 
 
