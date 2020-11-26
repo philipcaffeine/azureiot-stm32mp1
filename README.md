@@ -11,9 +11,6 @@ languages:
 # Configure and deploy IoT Edge on STM32MP1 board
 
 
-
-For all samples to set up GitHub workflows, see [Create your first workflow](https://github.com/Azure/actions-workflow-samples
-
 ## Pre-requisites
 * Azure account: 
     Bring your own Azure account to keep all your dev works. 
@@ -27,9 +24,11 @@ For all samples to set up GitHub workflows, see [Create your first workflow](htt
     vsciot-vscode.azure-iot-edge
     vsciot-vscode.azure-iot-toolkit
     
-# [Optional] Flash your board with OpenSTLinux images
+## [Optional] Flash your board with OpenSTLinux images
 
-## Ready your STM32MP1 board with USB connection 
+### Ready your STM32MP1 board with USB connection 
+
+### Download build image with IoT Edge binary to flash on board
 
 1. Connection your board with USB, have your STCubeProgrammer read on your host computer 
 2. Copy flashed image from One drive [place link here] to your local host. Unzip to folder "stm32mp1"
