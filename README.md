@@ -82,10 +82,10 @@ Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connecti
 
 4. Input the previous Edge connection string to config.yaml file below. Also modify hostname.
 
-    --#
+    --
     PC> vi ./config.yaml
 
-    --# Manual provisioning configuration
+    -- Manual provisioning configuration
     provisioning:
     source: "manual"
     device_connection_string: "<ADD DEVICE CONNECTION STRING HERE>"
