@@ -82,9 +82,10 @@ Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connecti
 
 4. Input the previous Edge connection string to config.yaml file below. Also modify hostname.
 
+    --#
     PC> vi ./config.yaml
 
-    -- # Manual provisioning configuration
+    --# Manual provisioning configuration
     provisioning:
     source: "manual"
     device_connection_string: "<ADD DEVICE CONNECTION STRING HERE>"
@@ -98,10 +99,11 @@ Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connecti
     to, 
     hostname: "stm32mp1"
 
-then, save config.yaml
+Then, save config.yaml
 
 5. Restart your edge to take effect 
 
+    --#
     PC> systemctl restart iotedge
 
 It will take around 3 - 5 mins for yor edge to download firat IoT Edge module, edgeAgent
@@ -111,10 +113,9 @@ It will take around 3 - 5 mins for yor edge to download firat IoT Edge module, e
 
 6. Some usful commands to check your edge status
 
+    --#
     PC> systemctl status iotedge
-
     PC> iotedge list 
-
     PC> iotedge logs -f edgeAgent
 
 ### Set your IoT Edge to install modules
