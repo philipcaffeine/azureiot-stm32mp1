@@ -74,15 +74,15 @@ Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connecti
 
 3. Network SSH or use Tera Term to terminal to connect to your board
 
-PC> ssh root@your_board_ip_address
+    PC> ssh root@your_board_ip_address
 
-PC> cd /etc/iotedge
+    PC> cd /etc/iotedge
 
-PC> cp ./config.yaml ./config.yaml.orig
+    PC> cp ./config.yaml ./config.yaml.orig
 
 4. Input the previous Edge connection string to config.yaml file below. Also modify hostname.
 
-vi ./config.yaml
+    PC> vi ./config.yaml
 
     -- # Manual provisioning configuration
     provisioning:
@@ -102,7 +102,7 @@ then, save config.yaml
 
 5. Restart your edge to take effect 
 
-PC> systemctl restart iotedge
+    PC> systemctl restart iotedge
 
 It will take around 3 - 5 mins for yor edge to download firat IoT Edge module, edgeAgent
 
@@ -111,13 +111,11 @@ It will take around 3 - 5 mins for yor edge to download firat IoT Edge module, e
 
 6. Some usful commands to check your edge status
 
-systemctl status iotedge
+    PC> systemctl status iotedge
 
-iotedge list 
+    PC> iotedge list 
 
-iotedge logs -f edgeAgent
-
-
+    PC> iotedge logs -f edgeAgent
 
 ### Set your IoT Edge to install modules
 
@@ -150,6 +148,10 @@ Right click to generate the deployment to your edge device.
 
 ![](2020-11-26-10-43-15.png)
 
+
+4. You can watch logs from edgeAgent to check installation progesss as well 
+
+    PC> iotedge logs -f edgeAgent
 
 
 
