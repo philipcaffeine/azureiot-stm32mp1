@@ -66,6 +66,57 @@ Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connecti
 ![](2020-11-26-09-45-36.png)
 
 
+### Connect your IoT Edge on board to cloud 
+
+1. Switch your new flashed board to "on"
+
+2. Connect your board to internet, either via Ethernet or Wifi dongle 
+
+3. Network SSH or use Tera Term to terminal to connect to your board
+
+PC> ssh root@your_board_ip_address
+
+PC> cd /etc/iotedge
+
+PC> cp ./config.yaml ./config.yaml.orig
+
+4. Input the previous Edge connection string to config.yaml file below. Also modify hostname.
+
+vi ./config.yaml
+
+    -- # Manual provisioning configuration
+    provisioning:
+    source: "manual"
+    device_connection_string: "<ADD DEVICE CONNECTION STRING HERE>"
+
+        -- Sample connection string as below 
+        HostName=yourhub.azure-devices.net;DeviceId=my-iotworkshop-edge01;SharedAccessKey=yourkey
+
+    --###############################################################################
+
+    hostname: "<ADD HOSTNAME HERE>"
+    to, 
+    hostname: "stm32mp1"
+
+then, save config.yaml
+
+5. Restart your edge to take effect 
+
+PC> systemctl restart iotedge
+
+It will take around 3 - 5 mins for yor edge to download firat IoT Edge module, edgeAgent
+
+![](2020-11-26-10-15-07.png)
+
+
+6. Some usful commands to check your edge status
+
+systemctl status iotedge
+
+iotedge list 
+
+iotedge logs -f edgeAgent
+
 
 
 
