@@ -41,9 +41,36 @@ For example:
 
 "C:\Program Files (x86)\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin\STM32_Programmer_CLI.exe" -c port=usb1 -w c:\stm32mp1\flashlayout_st-image-weston\trusted\FlashLayout_sdcard_stm32mp157a-dk1-trusted.tsv
 
-
-![](./figures/2020-11-26-08-41-55.png)
 ![](./figures/pic01.png)
+
+7. After completing flash, swith board to "on", restart it
+
+## Configure IoT Hub and Edge on Azure Portal
+
+### Create IoT Hub on Azure Portal 
+
+1. Create IoT Hub. Ignore if you have your own Hub already. Follow below link. 
+https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal?view=iotedge-2018-06
+
+2. Register an IoT Edge device
+
+Create a device identity for your IoT Edge device so that it can communicate with your IoT hub. The device identity lives in the cloud, and you use a unique device connection string to associate a physical device to a device identity.
+
+[Azure Portal] Goes to your IOT Hub, click IoT Edge link in left hand navigator. Click "Add an IoT Edge Device" in top area. 
+
+![](2020-11-26-09-42-37.png)
+
+Input "Device ID": my-iotworkshop-edge01, click "Save".
+Reclick the new edge "my-iotworkshop-edge01" created, copy the "primary connection string", save to your notepad to use later. 
+
+![](2020-11-26-09-45-36.png)
+
+
+
+
+
+
+
 
 
 
