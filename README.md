@@ -41,10 +41,8 @@ For example:
 
 "C:\Program Files (x86)\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin\STM32_Programmer_CLI.exe" -c port=usb1 -w c:\stm32mp1\flashlayout_st-image-weston\trusted\FlashLayout_sdcard_stm32mp157a-dk1-trusted.tsv
 
- 
 
-
-
+![](2020-11-26-08-41-55.png)
 
 
 
