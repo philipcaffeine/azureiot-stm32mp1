@@ -15,29 +15,22 @@ languages:
 For all samples to set up GitHub workflows, see [Create your first workflow](https://github.com/Azure/actions-workflow-samples
 
 ## Pre-requisites
-* 1. Install VS Code https://code.visualstudio.com/download
-* 2. Install Azure IoT Explorer
-* 3. Install Azure IoT Explorer
+* Azure account: 
+    Bring your own Azure account to keep all your dev works. 
+    or apply one for trial https://azure.microsoft.com/en-us/free/
+* Install VS Code:
+    https://code.visualstudio.com/download
+* Install Azure IoT Explorer:
+    https://github.com/Azure/azure-iot-explorer/releases. How to use: https://docs.microsoft.com/en-us/azure/iot-pnp/howto-use-iot-explorer
+* Install Azure
 
 
 
 # 1. [Optional] Flash your board with OpenSTLinux images
 
-
 ### Create an ASP.NET App Service in Azure
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-windows-ASPNET%2Fazuredeploy.json" target="_blank">
-</a>
 
-This template deploys a web app with ASP.NET support. The web app with ASP.NET is an app service that allows you to deploy your ASP.NET website. This will deploy a free tier Windows App Service Plan where you will host your App Service.
-
-If you are new to Azure App Service, see:
-
-- [Azure App Service](https://azure.microsoft.com/services/app-service/web/)
-
-
-## Configure secrets in the GH repo:
-* In the GH repo with Application code, [Define a new secret](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md) under repository by navigating to **settings** > **secrets** > **Add a new secret** 
 
 
 
