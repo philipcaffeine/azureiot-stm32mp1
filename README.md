@@ -119,6 +119,21 @@ iotedge logs -f edgeAgent
 
 
 
+### Set your IoT Edge to install modules
+
+1. Open your VS code, git clone the 
+
+1. [Azure Portal] Go to IoT Hub, select your edge just created. Click "Set Modules". Click "Review + Create", copy the deployment.json [link] content into Deployment windows.  
+
+![](2020-11-26-10-28-45.png)
+
+
+
+
+
+
+
+
 
 
 

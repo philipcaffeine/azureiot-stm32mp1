@@ -1,0 +1,92 @@
+{
+  "modulesContent": {
+    "$edgeAgent": {
+      "properties.desired": {
+        "modules": {
+          "SensorReadModule": {
+            "settings": {
+              "image": "stmsworkshopreg01.azurecr.io/sensorreadmodule:0.0.16-arm32v7.debug",
+              "createOptions": "{\"ExposedPorts\":{\"5678/tcp\":{}},\"HostConfig\":{\"Mounts\":[{\"Source\":\"/home/root/sensor/output\",\"Target\":\"/sensor\",\"Type\":\"bind\"}],\"PortBindings\":{\"5678/tcp\":[{\"HostPort\":\"5678\"}]}}}"
+            },
+            "type": "docker",
+            "version": "1.0",
+            "status": "running",
+            "restartPolicy": "always"
+          },
+          "SimulatedTemperatureSensor": {
+            "settings": {
+              "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0.9-rc2-linux-arm32v7",
+              "createOptions": "{}"
+            },
+            "type": "docker",
+            "version": "1.0",
+            "env": {
+              "MessageCount": {
+                "value": "-1"
+              }
+            },
+            "status": "running",
+            "restartPolicy": "always"
+          },
+        },
+        "runtime": {
+          "settings": {
+            "minDockerVersion": "v1.25",
+            "registryCredentials": {
+              "stmsworkshopreg01": {
+                "address": "stmsworkshopreg01.azurecr.io",
+                "password": "input the password",
+                "username": "stmsworkshopreg01"
+              }
+            }
+          },
+          "type": "docker"
+        },
+        "schemaVersion": "1.0",
+        "systemModules": {
+          "edgeAgent": {
+            "settings": {
+              "image": "mcr.microsoft.com/azureiotedge-agent:1.0",
+              "createOptions": "{\"HostConfig\":{}}"
+            },
+            "type": "docker",
+            "env": {
+              "SendRuntimeQualityTelemetry": {
+                "value": "false"
+              }
+            }
+          },
+          "edgeHub": {
+            "settings": {
+              "image": "mcr.microsoft.com/azureiotedge-hub:1.0",
+              "createOptions": "{\"HostConfig\":{\"PortBindings\":{\"5671/tcp\":[{\"HostPort\":\"5671\"}],\"8883/tcp\":[{\"HostPort\":\"8883\"}],\"443/tcp\":[{\"HostPort\":\"443\"}]}}}"
+            },
+            "type": "docker",
+            "status": "running",
+            "restartPolicy": "always"
+          }
+        }
+      }
+    },
+    "$edgeHub": {
+      "properties.desired": {
+        "routes": {
+          "SensorReadModuleToIoTHub": "FROM /messages/modules/SensorReadModule/outputs/* INTO $upstream",
+          "sensorToSensorReadModule": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/SensorReadModule/inputs/input1\")"
+        },
+        "schemaVersion": "1.0",
+        "storeAndForwardConfiguration": {
+          "timeToLiveSecs": 7200
+        }
+      }
+    },
+    "SensorReadModule": {
+      "properties.desired": {
+        "TemperatureThreshold": 25
+      }
+    },
+    "SimulatedTemperatureSensor": {
+      "properties.desired": {}
+    }
+  }
+}
