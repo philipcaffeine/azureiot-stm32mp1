@@ -134,15 +134,13 @@ Open your VS code, in command platte, select "Azure IOT Hub, set connection stri
 
 
 3. Deployment new edge modules via VS code
-
-    PC > mkdir $HOME/root/sensor
-    PC > mkdir $HOME/root/sensor/output
+commitcommitcin
 
 First to replace the password get from your instructor. 
 
 ![](./figures/2020-11-26-10-47-54.png)
 
-Right click to generate the deployment to your edge device.
+Right click "deployment.template.local.json" to generate the deployment to your edge device.
 
 ![](./figures/2020-11-26-10-41-36.png)
 
