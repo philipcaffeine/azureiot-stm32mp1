@@ -5,7 +5,7 @@
 
 
 # password file
-deployment.template.local.json
+deployment.template.local-bak.json
 
 # User-specific files
 *.suo
