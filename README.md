@@ -138,13 +138,17 @@ commitcommitcin
 
 First to replace the password get from your instructor.
 
-also, create 
+also, create a new folder for binding
 
-cd /home/root
-mkdir sensor
-cd /home/root/sensor
-mkdir output
+  cd /home/root
+  
+  mkdir sensor
 
+also, create a new folder for binding
+
+  cd /home/root/sensor
+  
+  mkdir output
 
 
 ![](./figures/2020-11-26-10-47-54.png)
