@@ -147,8 +147,6 @@ mkdir output
 
 
 
-
-
 ![](./figures/2020-11-26-10-47-54.png)
 
 Right click "deployment.template.local.json" to generate the deployment to your edge device.
